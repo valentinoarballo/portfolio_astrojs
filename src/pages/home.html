@@ -1,15 +1,24 @@
-<section class="ml-6 p-4 md:mt-24 mt-6 md:items-center h-3/4  bg-black inline-block
- text-white text-left flex-wrap">
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
 
-    <p class="bg-black 2xl:text-8xl xl:text-6xl lg:text-4xl md:text-2xl text-xl font-black inline-block md:mb-0  drop-shadow-2xl">
-        Hello,
-    </p>
-    <br>
-    <p class="bg-black 2xl:text-8xl xl:text-6xl lg:text-4xl md:text-2xl text-xl font-black mb-2 md:mb-0 drop-shadow-2xl inline-block">
-        I'm Valentino Arballo
-    </p>
-    <br>
-    <p class="bg-black xl:text-4xl lg:text-2xl text-xl font-semibold drop-shadow-2xl inline-block">
-        A software developer.
-    </p>
-</section>
+<Layout title="Welcome to Astro.">
+    <main class="ml-6 p-4 md:mt-24 mt-6 md:items-center h-3/4  bg-black inline-block
+        text-white text-left flex-wrap">
+
+        <p
+            class="bg-black 2xl:text-8xl xl:text-6xl lg:text-4xl md:text-2xl text-xl font-black inline-block md:mb-0  drop-shadow-2xl">
+            Hello,
+        </p>
+        <br>
+        <p
+            class="bg-black 2xl:text-8xl xl:text-6xl lg:text-4xl md:text-2xl text-xl font-black mb-2 md:mb-0 drop-shadow-2xl inline-block">
+            I'm Valentino Arballo
+        </p>
+        <br>
+        <p class="bg-black xl:text-4xl lg:text-2xl text-xl font-semibold drop-shadow-2xl inline-block">
+            A software developer.
+        </p>
+    </main>
+</Layout>
