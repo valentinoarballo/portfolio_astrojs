@@ -1,23 +1,35 @@
 ---
 interface Props {
-	title: string;
+    title: string;
+    backgroundClass?: string;
 }
 
-const { title } = Astro.props;
+const { title, backgroundClass } = Astro.props;
+const bodyClass = backgroundClass
+    ? `bg-cover sm:bg-center bg-no-repeat ${backgroundClass}`
+    : "bg-cover sm:bg-center bg-no-repeat";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Valentino Arballo Portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link href="src/css/LayoutStyle.css" rel="stylesheet" />
+        <title>{title}</title>
+    </head>
 
+    <body class={bodyClass}>
+        <header class="flex justify-center w-2/3 pt-5 font-semibold">
+            <a href="/" class="backdrop-blur-md py-4 px-8 border-r-2">Home</a>
+            <a href="/works" class="backdrop-blur-md py-4 px-8 border-r-2"
+                >Works</a
+            >
+            <a href="/contact" class="backdrop-blur-md py-4 px-8">Contact Me</a>
+        </header>
+
+        <slot />
+    </body>
+</html>

@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Contact">
+	<main class="bg-cover bg-center bg-no-repeat">
+
+        <section class="flex flex-col items-center mt-12 w-full mb-8">
+            <p class="text-6xl font-bold border-r-2 border-l-2 px-8 border-black">
+                Contact Me
+            </p>
+            <p class="text-center mt-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae odit dolorem
+            </p>
+        </section>
+    
+        <section class="bg-white">
+            <div class="pt-8 mb-6 lg:pt-16 px-4 mx-auto max-w-screen-md">
+    
+    
+                <form action="#" class="space-y-8">
+    
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your
+                            email</label>
+                        <input type="email" id="email"
+                            class="shadow-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full p-2.5"
+                            placeholder="name@Gmail.com" required>
+                    </div>
+    
+                    <div>
+                        <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
+                        <input type="text" id="subject"
+                            class="block p-3 w-full text-sm text-gray-900 bg-gray-50  border border-gray-300 shadow-lg"
+                            placeholder="Let us know how I can help you" required>
+                    </div>
+    
+                    <div class="sm:col-span-2">
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your
+                            message</label>
+                        <textarea id="message" rows="6"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50  shadow-lg border border-gray-300"
+                            placeholder="Leave a comment..."></textarea>
+                    </div>
+    
+                    <button type="submit" class="p-2 m-2 w-full text-center border border-black hover:text-white hover:bg-black">
+                        Send message
+                    </button>
+    
+    
+                </form>
+            </div>
+        </section>
+    
+        <section class="flex flex-col items-center w-full">
+            <p class="text-xl font-bold border-r-2 border-l-2 px-8 border-black">
+                My network
+            </p>
+            <div class="mt-4 flex w-full justify-center gap-8">
+                <a href="">Linkedin</a>
+                <a href="">Github</a>
+                <a href="">Instagram</a>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+
+
