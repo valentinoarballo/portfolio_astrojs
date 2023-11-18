@@ -1,15 +1,12 @@
 ---
-import { ViewTransitions  } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
     title: string;
-    backgroundClass?: string;
 }
 
-const { title, backgroundClass } = Astro.props;
-const bodyClass = backgroundClass
-    ? `bg-cover sm:bg-center bg-no-repeat ${backgroundClass}`
-    : "bg-cover sm:bg-center bg-no-repeat";
+const { title } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -24,8 +21,8 @@ const bodyClass = backgroundClass
         <ViewTransitions />
     </head>
 
-    <body class={bodyClass}>
-        <header class="flex justify-center w-2/3 pt-5 font-semibold">
+    <body>
+        <header class="flex justify-center w-2/3 py-2 border-b-2 font-semibold">
             <a href="/" class="backdrop-blur-md py-4 px-8 border-r-2">Home</a>
             <a href="/works" class="backdrop-blur-md py-4 px-8 border-r-2"
                 >Works</a
@@ -34,6 +31,6 @@ const bodyClass = backgroundClass
         </header>
 
         <slot />
+
     </body>
-    
 </html>
