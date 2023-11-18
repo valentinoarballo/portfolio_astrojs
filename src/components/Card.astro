@@ -10,16 +10,23 @@ interface Props {
 const { tags, href, src, title, body } = Astro.props;
 ---
 
-<div
+<article
 	class="max-w-sm min-h-[450px] rounded overflow-hidden shadow-lg flex flex-col h-full"
 >
-	<img class="w-full" src={src} />
-	<div class="px-6 py-4 flex-1">
-		<div class="font-bold text-xl mb-2">{title}</div>
+	<img
+		class="w-full"
+		src={src}
+		alt=`representative image of ${title} personal project`
+		title=`${title} personal project`
+	/>
+
+	<header class="px-6 py-4 flex-1">
+		<h6 class="font-bold text-xl mb-2">{title}</h6>
 		<p class="text-gray-700 text-base">
 			{body}
 		</p>
-	</div>
+	</header>
+
 	<div class="px-6 pt-4 pb-2">
 		{
 			tags.map((tag) => (
@@ -29,7 +36,8 @@ const { tags, href, src, title, body } = Astro.props;
 			))
 		}
 	</div>
-	<div class="w-full flex justify-center items-end">
+
+	<footer class="w-full flex justify-center items-end">
 		<a
 			target="_blank"
 			href={href}
@@ -37,5 +45,6 @@ const { tags, href, src, title, body } = Astro.props;
 		>
 			See more
 		</a>
-	</div>
-</div>
+	</footer>
+
+</article>
