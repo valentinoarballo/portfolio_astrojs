@@ -6,31 +6,67 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Valentino Arballo Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link href="src/css/LayoutStyle.css" rel="stylesheet" />
         <title>{title}</title>
+
+        <meta
+            name="description"
+            content="Valentino Arballo's portfolio, an Argentinian software developer."
+        />
+
+        <meta property="og:title" content="Valentino Arballo Portfolio." />
+        <meta
+            property="og:description"
+            content="Valentino Arballo's portfolio, an Argentinian software developer."
+        />
+        <meta property="og:image" content="/yo.jpg" />
+        <meta property="og:image:alt" content="image of Valentino Arballo" />
+
+        <!-- <link rel="alternate" href="" hreflang="es-MX"> -->
+        <link
+            rel="canonical"
+            href="https://dashing-platypus-c0244a.netlify.app/"
+        />
+
+        <meta name="theme-color" content="#000000" />
+        <meta name="robots" content="index, follow" />
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <ViewTransitions />
     </head>
 
     <body>
-        <header class="flex justify-center w-2/3 py-2 border-b-2 font-semibold">
-            <a href="/" class="backdrop-blur-md py-4 px-8 border-r-2">Home</a>
-            <a href="/works" class="backdrop-blur-md py-4 px-8 border-r-2"
-                >Works</a
-            >
-            <a href="/contact" class="backdrop-blur-md py-4 px-8">Contact Me</a>
+        <header class="flex justify-center lg:w-2/3 py-2 font-semibold">
+            <nav class="my-2">
+                <ul class="flex">
+                    <li class="mr-2">
+                        <a href="/" class="py-4 px-8 border-r-2">Home</a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="/works" class="py-4 px-8 border-r-2">Works</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="py-4 px-8">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
-
+        
         <slot />
 
+
+        <!-- <footer>
+            <a 
+                type="submit" href="https://api.whatsapp.com/send?phone=+5493585019488&text=Hi+Valentino%2C%0A%0AI%27m+interested+in+learning+more+about+your+experiences+and+discussing+potential+collaboration+or+simply+sharing+insights+in+the+field.+Would+you+be+available+for+a+chat+or+a+meeting+sometime+soon%3F%0A%0ALooking+forward+to+hearing+from+you%21"
+                class="p-2 m-2 w-full text-center border border-black hover:text-white hover:bg-black">
+                Send message
+            </a>
+        </footer> -->
     </body>
 </html>
