@@ -28,13 +28,17 @@ const { tags, href, src, title, body } = Astro.props;
 	</header>
 
 	<div class="px-6 pt-4 pb-2">
-		{
-			tags.map((tag) => (
-				<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-					{tag}
-				</span>
-			))
-		}
+		
+		<details>
+			<summary>See technologies</summary>
+			{
+				tags.map((tag) => (
+					<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-2">
+						{tag}
+					</span>
+				))
+			}
+		</details>
 	</div>
 
 	<footer class="w-full flex justify-center items-end">
