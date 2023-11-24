@@ -39,6 +39,11 @@ const { title } = Astro.props;
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <ViewTransitions />
+        <style>
+            html {
+              scroll-behavior: smooth;
+            }
+          </style>
     </head>
 
     <body>
@@ -46,13 +51,13 @@ const { title } = Astro.props;
             <nav class="my-2">
                 <ul class="flex">
                     <li class="mr-2">
-                        <a href="/" class="py-4 px-8 border-r-2">Home</a>
+                        <a href="#hero" class="py-4 px-8 border-r-2">Home</a>
                     </li>
                     <li class="mr-2">
-                        <a href="/works" class="py-4 px-8 border-r-2">Works</a>
+                        <a href="#work" class="py-4 px-8 border-r-2">Works</a>
                     </li>
                     <li>
-                        <a href="/contact" class="py-4 px-8">Contact</a>
+                        <a href="#contact" class="py-4 px-8">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -60,9 +65,5 @@ const { title } = Astro.props;
         
         <slot />
 
-
-        <!-- <footer>
-            
-        </footer> -->
     </body>
 </html>
