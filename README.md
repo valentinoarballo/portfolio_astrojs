@@ -20,20 +20,14 @@ Inside of this Astro project, you'll see the following folders and files:
 |   |       ├── Header.astro
 |   |       ├── Footer.astro
 |   |       └── ...
-│   ├── data/
 │   ├── layouts/
 │   |   |── Layout.astro
 │   |   └── ...
 │   ├── pages/
-│   |   ├── peojects.astro
 │   |   ├── index.astro
-│   ├── styles/
-│   |   |── custom-styles.css
-│   |   |── fonts.css
-│   |   └── styles.css
-│   ├── types/
-│   ├── utils/
 ├── package.json
+├── tsconfig.json
+├── tailwind.conf.js
 └── ...
 ```
 
