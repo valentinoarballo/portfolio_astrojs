@@ -21,7 +21,7 @@ const { tags, href, src, title, body } = Astro.props;
 	/>
 
 	<header class="px-6 py-4 flex-1">
-		<h6 class="font-bold text-xl mb-2">{title}</h6>
+		<h6 translate="no" class="font-bold text-xl mb-2">{title}</h6>
 		<p class="text-gray-700 text-base">
 			{body}
 		</p>
@@ -33,7 +33,7 @@ const { tags, href, src, title, body } = Astro.props;
 			<summary>See technologies</summary>
 			{
 				tags.map((tag) => (
-					<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-2">
+					<span translate="no" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-2">
 						{tag}
 					</span>
 				))

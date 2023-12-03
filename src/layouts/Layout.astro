@@ -47,17 +47,17 @@ const { title } = Astro.props;
     </head>
 
     <body>
-        <header class="flex pl-8 py-2 font-semibold sticky top-0 bg-white z-10">
-            <nav class="my-2">
-                <ul class="flex">
-                    <li class="mr-2">
-                        <a href="#hero" class="py-4 px-8 border-r-2">Home</a>
-                    </li>
-                    <li class="mr-2">
-                        <a href="#work" class="py-4 px-8 border-r-2">Works</a>
+        <header class="flex font-semibold sticky top-0 bg-white z-10">
+            <nav class="my-4 w-full">
+                <ul class="flex w-full lg:justify-start justify-evenly">
+                    <li>
+                        <a href="#work" class="py-4 lg:mx-8">My Works</a>
                     </li>
                     <li>
-                        <a href="#contact" class="py-4 px-8">Contact</a>
+                        <a href="#about" class="py-4 lg:mx-8">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="py-4 lg:mx-8">Contact</a>
                     </li>
                 </ul>
             </nav>
