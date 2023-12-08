@@ -1,5 +1,6 @@
 ---
 import Card from './Card.astro';
+import CardLive from './CardLive.astro';
 ---
 
     <section id="work" transition:name="section-contact" class="bg-cover bg-center bg-no-repeat my-12 CardMove">
@@ -31,10 +32,11 @@ import Card from './Card.astro';
             tags={['Python', 'Flask', 'Tailwind', 'Docker']}
             />
 
-            <Card
+            <CardLive
             title='Tesla',
             body='A clone of the tesla motors page.',
             href='https://github.com/valentinoarballo/TeslaClon',
+            hrefLive='https://github.com/valentinoarballo/TeslaClon',
             src='/assets/images/tesla.png',
             tags={['Astro JS', 'JavaScript', 'Tailwind']}
             />
