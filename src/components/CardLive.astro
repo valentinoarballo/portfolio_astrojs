@@ -1,0 +1,62 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+	hrefLive: string;
+	src: string;
+	tags: Array<string>;
+}
+
+const { tags, href, hrefLive, src, title, body } = Astro.props;
+---
+
+<article
+	class="max-w-sm min-h-[450px] rounded overflow-hidden shadow-lg flex flex-col h-full"
+>
+	<img
+		class="w-full"
+		src={src}
+		alt=`representative image of ${title} personal project`
+		title=`${title} personal project`
+	/>
+
+	<header class="px-6 py-4 flex-1">
+		<h6 translate="no" class="font-bold text-xl mb-2">{title}</h6>
+		<p class="text-gray-700 text-base">
+			{body}
+		</p>
+	</header>
+
+	<div class="px-6 pt-4 pb-2">
+		
+		<details>
+			<summary>See technologies</summary>
+			{
+				tags.map((tag) => (
+					<span translate="no" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-2">
+						{tag}
+					</span>
+				))
+			}
+		</details>
+	</div>
+
+	<footer class="w-full flex justify-center items-end">
+		<a
+			target="_blank"
+			href={href}
+			class="p-2 m-2 w-full text-center border border-black hover:text-white hover:bg-black"
+		>
+			See More
+		</a>
+        <a
+			target="_blank"
+			href={href}
+			class="p-2 m-2 w-full text-center border bg-red-400 border-red-700 text-black hover:bg-red-600"
+		>
+			See Live
+		</a>
+	</footer>
+
+</article>
