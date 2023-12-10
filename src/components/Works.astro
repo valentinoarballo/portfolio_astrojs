@@ -1,5 +1,6 @@
 ---
 import Card from './Card.astro';
+import CardLive from './CardLive.astro';
 ---
 
     <section id="work" transition:name="section-contact" class="bg-cover bg-center bg-no-repeat my-12 CardMove">
@@ -8,12 +9,12 @@ import Card from './Card.astro';
             <h4 class="text-6xl font-bold px-8 border-black">
                 My Works
             </h4>
-            <p class="text-center mt-6">
+            <p class="text-center mt-6 px-5">
                 Here you can find some of my personal projects that showcase my skills and interest in varios domains.
             </p>
         </article>
 
-        <section class="flex p-12 gap-12 flex-wrap justify-evenly">
+        <section class="flex p-12 gap-12 flex-wrap justify-evenly z-10 bg-white">
 
             <Card
             title='TuXchange',
@@ -31,18 +32,20 @@ import Card from './Card.astro';
             tags={['Python', 'Flask', 'Tailwind', 'Docker']}
             />
 
-            <Card
+            <CardLive
             title='Tesla',
-            body='A clone of the tesla motors page.',
+            body='A clone of the tesla motors landing page.',
             href='https://github.com/valentinoarballo/TeslaClon',
+            hrefLive='https://animated-taffy-0fb30b.netlify.app/',
             src='/assets/images/tesla.png',
             tags={['Astro JS', 'JavaScript', 'Tailwind']}
             />
 
-            <Card
+            <CardLive
             title='Space X',
             body="A Space X rocket wiki providing information fetched from two API's.",
             href='https://github.com/valentinoarballo/SpaceX',
+            hrefLive='https://merry-beijinho-dbcc9c.netlify.app/',
             src='/assets/images/SpaceX.png',
             tags={['Astro JS', 'TypeScript', 'Tailwind']}
             />
@@ -65,6 +68,11 @@ import Card from './Card.astro';
 
         </section>
 
+        <div class="w-full flex justify-center">
+            <a type="submit" href="https://github.com/valentinoarballo" target="blank" class="hover:text-white text-black hover:font-black font-bold hover:border-white border border-black bg-gradient-to-r hover:from-orange-400 hover:to-orange-500 text-sm py-2.5 mt-12 px-44 text-center">
+                See more
+            </a>
+        </div>
 
 
 

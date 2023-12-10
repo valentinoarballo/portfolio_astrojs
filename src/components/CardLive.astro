@@ -3,11 +3,12 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	hrefLive: string;
 	src: string;
 	tags: Array<string>;
 }
 
-const { tags, href, src, title, body } = Astro.props;
+const { tags, href, hrefLive, src, title, body } = Astro.props;
 ---
 
 <article
@@ -48,6 +49,13 @@ const { tags, href, src, title, body } = Astro.props;
 			class="p-2 m-2 w-full text-center border border-black hover:text-white hover:bg-black"
 		>
 			Show Code
+		</a>
+        <a
+			target="_blank"
+			href={hrefLive}
+			class="p-2 m-2 w-full text-center font-bold border-orange-500 border text-white bg-gradient-to-br hover:from-orange-600 hover:to-orange-400 from-orange-400 to-orange-600 "
+		>
+			Open Live
 		</a>
 	</footer>
 
