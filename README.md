@@ -21,22 +21,23 @@ Inside of this Astro project, you'll see the following folders and files:
 ```
 /
 ├── public/
-│   ├── assets
-│   │   ├── fonts
-|   |   └── images
+│   ├── assets/
+│   │   ├── fonts/
+│   │   └── images/
 │   └── favicon.svg
+│
 ├── src/
 │   ├── components/
-│   │   ├── home/
-|   |   └── general/
-|   |       ├── Header.astro
-|   |       ├── Footer.astro
-|   |       └── ...
+│   │    ├── Header.astro
+│   │    ├── Footer.astro
+│   │    └── ...
+│   │
 │   ├── layouts/
-│   |   |── Layout.astro
-│   |   └── ...
-│   ├── pages/
-│   |   ├── index.astro
+│   │   └── Layout.astro
+│   │
+│   └── pages/
+│       └── index.astro
+│
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.conf.js
