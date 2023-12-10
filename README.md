@@ -21,9 +21,9 @@ Inside of this Astro project, you'll see the following folders and files:
 ```
 /
 ├── public/
-│   ├── assets
-│   │   ├── fonts
-│   │   └── images
+│   ├── assets/
+│   │   ├── fonts/
+│   │   └── images/
 │   └── favicon.svg
 │
 ├── src/
