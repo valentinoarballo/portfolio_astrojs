@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/HeroSection.astro";
 import Footer from "../components/Footer.astro";
 import About from "../components/About.astro";
+import Cv from "../components/Cv.astro";
 ---
 
 <Layout title="Valentino Arballo Portfolio - Software Developer">
@@ -18,6 +19,10 @@ import About from "../components/About.astro";
             <Works />
 
             <About />
+
+            <div class="w-full my-10 p-8 lg:hidden justify-center">
+                <Cv />
+            </div>
             
             <Contact />
 
